@@ -1,0 +1,68 @@
+*ctrlp-chdir.txt*						*ctrlp-chdir*
+
+Version: 1.0.0
+Author : DeaR <nayuri@kuonn.mydns.jp>
+License: Vim License  (see :help |license|)
+
+==============================================================================
+CONTENTS					*ctrlp-chdir-contents*
+
+INTRODUCTION					|ctrlp-chdir-introduction|
+REQUIREMENTS					|ctrlp-chdir-requirements|
+INTERFACE					|ctrlp-chdir-interface|
+  COMMANDS					|ctrlp-chdir-commands|
+CHANGELOG					|ctrlp-chdir-changelog|
+
+
+==============================================================================
+INTRODUCTION					*ctrlp-chdir-introduction*
+
+Change the working directory extension for |CtrlP|.
+
+Comparison with |:CtrlPDir|.
+- Press <CR> is change and exit.
+- Add ".".
+- Command is divided like a |:chdir| and |:lchdir|.
+
+
+==============================================================================
+REQUIREMENTS					*ctrlp-chdir-requirements*
+
+- Vim 7.3 or later
+- |CtrlP|
+
+|CtrlP|		(http://kien.github.com/ctrlp.vim)
+
+
+==============================================================================
+INTERFACE					*ctrlp-chdir-interface*
+------------------------------------------------------------------------------
+COMMANDS					*ctrlp-chdir-commands*
+
+:CtrlPChdir [starting-directory]				*:CtrlPChdir*
+	Search for a directory and change the global working directory to it.
+	Mappings:
+	- <CR> change the global working directory (exit)
+	- <C-V> change the local working directory for CtrlP and keep it open.
+	- <C-X> change the global working directory to CtrlP's current local
+	  working directory (exit).
+	Also see |:chdir|, |:CtrlPDir|.
+
+:CtrlPLchdir [starting-directory]				*:CtrlPLchdir*
+	Search for a directory and change the local working directory to it.
+	Mappings:
+	- <CR> change the local working directory (exit)
+	- <C-V> change the local working directory for CtrlP and keep it open.
+	- <C-X> change the local working directory to CtrlP's current local
+	  working directory (exit).
+	Also see |:lchdir|, |:CtrlPDir|.
+
+
+==============================================================================
+CHANGELOG					*ctrlp-chdir-changelog*
+
+1.0.0	First version.
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
